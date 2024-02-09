@@ -21,6 +21,7 @@ object ReadCSVFileUsingRDD {
     // creating case class
     case class StudentDetail(rollno: String, fullName: String, dateOfBirth: String, gender: String)
 
+    
     val rdd2:RDD[StudentDetail] = rdd1.map(row=>{
      val str = splitString(row)
       StudentDetail(str(0),str(1),str(2),str(3))
