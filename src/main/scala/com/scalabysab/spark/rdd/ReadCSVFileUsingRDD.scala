@@ -7,11 +7,7 @@ object ReadCSVFileUsingRDD {
 
   def main(args:Array[String]): Unit ={
 
-    def splitString(row:String):Array[String]={
-      row.split(",")
-    }
-
-     // creating spark session
+    // creating spark session
     val spark:SparkSession = SparkSession.builder().master("local[5]").appName("sparkscalabysab").getOrCreate()
     val sc = spark.sparkContext
 
@@ -21,13 +17,19 @@ object ReadCSVFileUsingRDD {
     // creating case class
     case class StudentDetail(rollno: String, fullName: String, dateOfBirth: String, gender: String)
 
-    
+    // spliting the strings
     val rdd2:RDD[StudentDetail] = rdd1.map(row=>{
-     val str = splitString(row)
+     val str = splitStr(row)
       StudentDetail(str(0),str(1),str(2),str(3))
     })
 
     rdd2.foreach(x=>println(x.fullName))
+
+    // function to split strings
+    def splitStr(row:String):Array[String]={
+      row.split(",")
+    }
+    
   }
 
 }
