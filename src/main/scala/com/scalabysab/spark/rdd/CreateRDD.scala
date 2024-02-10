@@ -17,6 +17,7 @@ object CreateRDD {
 
     val rdd2 = spark.sparkContext.textFile("/path_to_file/textFile.txt")
 
+    // reading file content using rdd
     val rdd3 = spark.sparkContext.wholeTextFiles("/path_to_file/textFile.txt")
     rdd3.foreach(record=>println("FileName -- " + record._1+ ", FileContents -- " + record._2))
 
