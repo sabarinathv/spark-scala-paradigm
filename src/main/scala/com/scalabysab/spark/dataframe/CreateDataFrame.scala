@@ -7,6 +7,7 @@ object CreateDataFrame {
 
   def main(args:Array[String]):Unit={
 
+    // Creating SparkSession
     val spark:SparkSession = SparkSession.builder().master("local[5]").appName("scalabysab").getOrCreate()
 
     import spark.implicits._
