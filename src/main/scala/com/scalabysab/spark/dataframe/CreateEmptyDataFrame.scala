@@ -2,7 +2,7 @@ package com.scalabysab.spark.dataframe
 
 import org.apache.spark.sql.SparkSession
 
-  object CreateEmptyDataFrameExample extends App {
+  object CreateEmptyDataFrame extends App {
 
     // Creating SparkSession
     val spark: SparkSession = SparkSession.builder().master("local[3]").appName("scalabysab").getOrCreate()
