@@ -16,8 +16,20 @@ object ReadCSVUsingDataFrame {
   val df2 = spark.read.options(Map("inferSchema"->"true","delimiter"->",","header"->"true")).csv("src/main/resources/student_records_with_header.csv")
   df2.show()
   df2.printSchema()
+
+  // Creating schema and reading through it
+  import org.apache.spark.sql.types._
+  val schema = new StructType().add("RollNumber",IntegerType,true).add("Name",StringType,true).add("DateOfBirth",StringType,true).add("Gender",StringType,true)
   
-  // To do
+  // Creating dataframe with the CSV file, schema attched
+  val dFWithSchema = spark.read.format("csv").option("header", "true").schema(schema).load("src/main/resources/student_records_with_header.csv")
+  dFWithSchema.printSchema()
+  dFWithSchema.show(false)
+
+ // Wrting the output as a CSV file
+ dFWithSchema.write.mode(SaveMode.Overwrite).csv("c:/tmp/output_path/student_records_output")
+ 
+ // To do
   
   }
 }
