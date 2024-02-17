@@ -8,16 +8,16 @@ import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructT
     // Creating SparkSession
     val spark: SparkSession = SparkSession.builder().master("local[3]").appName("scalabysab").getOrCreate()
 
-    // importing spark implicits
+    // Importing spark implicits
     import spark.implicits._
 
-    // creating schema
+    // Creating schema
     val schema = StructType( StructField("firstName", StringType, true) ::
                               StructField("lastName", IntegerType, false) ::)
 
     val colSeq = Seq("firstName","lastName")
 
-    // creating case class
+    // Creating case class
     case class Name(firstName: String, lastName: String)
 
     // Empty dataframe creation
@@ -29,7 +29,7 @@ import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructT
     // Case class implementation - option 2
     Seq.empty[Name].toDF().printSchema()
 
-    //Using emptyDataFrame - option 3
+    // Using emptyDataFrame function - option 3
     spark.emptyDataFrame
 
 
