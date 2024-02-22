@@ -11,7 +11,7 @@ import org.apache.spark.sql.{SaveMode, SparkSession}
     val df = spark.read.format("parquet").load("path_to_parquet_file/students_details.parquet")
     df.show()
     
-    // Converting Parquet file to Csv
-    df.write.mode(SaveMode.Overwrite).csv("/tmp/output/students_details.csv")
+    // Converting Parquet file to CSV
+    df.write.mode(SaveMode.Overwrite).csv("/tmp/output_path/students_details.csv")
     
   }
