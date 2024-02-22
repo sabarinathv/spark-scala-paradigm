@@ -8,10 +8,10 @@ import org.apache.spark.sql.{SaveMode, SparkSession}
     val spark: SparkSession = SparkSession.builder().master("local[3]").appName("scalabysab").getOrCreate()
 
     // Reading Parquet file
-    val df = spark.read.format("parquet").load("path_to_parquet_file/students_details.parquet")
+    val df = spark.read.format("parquet").load("src/main/resources/cars.parquet")
     df.show()
     
     // Converting Parquet file to CSV
-    df.write.mode(SaveMode.Overwrite).csv("/tmp/output_path/students_details.csv")
+    df.write.mode(SaveMode.Overwrite).csv("/tmp/output_path/cars_output.csv")
     
   }
