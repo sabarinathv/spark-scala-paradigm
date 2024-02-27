@@ -11,9 +11,10 @@ object ReadCSVFileUsingRDD {
     val spark:SparkSession = SparkSession.builder().master("local[3]").appName("sparkscalabysab").getOrCreate()
 
     // Reading text file using rdd
-    val readFileUsingRdd = spark.sparkContext.textFile("path_to_file/textSample.txt")
+    val readFileUsingRdd = spark.sparkContext.textFile("src/main/resources/text/sample.txt")
     println(readFileUsingRdd.getClass)
 
+    // To do
     
   }
 
