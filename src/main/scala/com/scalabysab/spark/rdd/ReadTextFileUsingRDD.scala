@@ -14,6 +14,11 @@ object ReadCSVFileUsingRDD {
     val readFileUsingRdd = spark.sparkContext.textFile("src/main/resources/text/sample.txt")
     println(readFileUsingRdd.getClass)
 
+    // Reading file using collect
+    readFileUsingRdd.collect().foreach(f=>{
+    println(f)
+    })
+
     // To do
     
   }
