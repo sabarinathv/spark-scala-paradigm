@@ -1,1 +1,5 @@
-this is the sample file to read content using spark rdd
+Tamil is natively spoken by the Tamil people of South Asia. Tamil is an official language of the Indian state of Tamil Nadu and union territory of Puducherry, and the sovereign nations of Sri Lanka and Singapore.
+
+Tamil is also spoken by significant minorities in the four other South Indian states of Kerala, Karnataka, Andhra Pradesh and Telangana, and the Union Territory of the Andaman and Nicobar Islands. It is also spoken by the Tamil diaspora found in many countries, including Malaysia, Myanmar, South Africa, United Kingdom, United States, Canada, Australia, New Zealand, United Arab Emirates, Saudi Arabia, France, Germany, Italy, Indonesia, and Mauritius. Tamil is also natively spoken by the Sri Lankan Moors. 
+
+One of 22 scheduled languages in the Constitution of India, Tamil was the first to be classified as a classical language of India
