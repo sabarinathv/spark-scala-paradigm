@@ -5,7 +5,7 @@ import org.apache.spark.sql.SparkSession
 object ReadTextFileUsingDataframe {
 
   // Creating SparkSession
-  val spark:SparkSession = SparkSession.builder().master("local[5]").appName("sparkscalabysab").getOrCreate()
+  val spark:SparkSession = SparkSession.builder().master("local[3]").appName("sparkscalabysab").getOrCreate()
 
   // Reading from text file
   val df = spark.read.text("src/main/resources/sample1.txt")
