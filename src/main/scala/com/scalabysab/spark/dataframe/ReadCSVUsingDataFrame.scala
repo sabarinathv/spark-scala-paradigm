@@ -28,8 +28,7 @@ object ReadCSVUsingDataFrame {
 
  // Wrting the output as a CSV file
  dFWithSchema.write.mode(SaveMode.Overwrite).csv("c:/tmp/output_path/student_records_output")
- 
- // To do
+
   
   }
 }
