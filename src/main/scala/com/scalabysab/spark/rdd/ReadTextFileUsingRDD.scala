@@ -19,6 +19,12 @@ object ReadCSVFileUsingRDD {
     println(f)
     })
 
+    // Reading text files using wildcard
+    val readFilesUsingWildcardRdd = spark.sparkContext.textFile("src/main/resources/text/sam*.txt")
+    readFilesUsingWildcardRdd.foreach(f=>{
+    println(f)
+    })
+    
     // To do
     
   }
