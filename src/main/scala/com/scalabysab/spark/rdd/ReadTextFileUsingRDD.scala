@@ -24,6 +24,12 @@ object ReadCSVFileUsingRDD {
     readFilesUsingWildcardRdd.foreach(f=>{
     println(f)
     })
+
+    // Reading all the text files from a specific directory
+    val readFilesFromDirRdd = spark.sparkContext.textFile("src/main/resources/text/*")
+    readFilesFromDirRdd.foreach(f=>{
+    println(f)
+    })
     
     // To do
     
