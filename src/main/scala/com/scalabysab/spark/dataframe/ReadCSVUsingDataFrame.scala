@@ -5,7 +5,7 @@ import org.apache.spark.sql.SparkSession
 object ReadCSVUsingDataFrame {
 
   // Creating SparkSession
-  val spark:SparkSession = SparkSession.builder().master("local[5]").appName("sparkscalabysab").getOrCreate()
+  val spark:SparkSession = SparkSession.builder().master("local[3]").appName("sparkscalabysab").getOrCreate()
 
   // Reading from CSV file
   val df1 = spark.read.csv("src/main/resources/student_records_with_header.csv")
