@@ -8,7 +8,7 @@ object CreateDataFrame {
   def main(args:Array[String]):Unit={
 
     // Creating SparkSession
-    val spark:SparkSession = SparkSession.builder().master("local[5]").appName("scalabysab").getOrCreate()
+    val spark:SparkSession = SparkSession.builder().master("local[3]").appName("scalabysab").getOrCreate()
 
     import spark.implicits._
     val columns = Seq("Cars","number_of_users")
