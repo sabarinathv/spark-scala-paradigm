@@ -11,6 +11,11 @@ object ReadJsonFileUsingDataframe {
   val df = spark.read.json("src/main/resources/cars.json")
   df.printSchema()
   df.show(false)
+
+  // Reading Multiline Json file using dataframe
+  val multilineJsonDf = spark.read.option("multiline", "true").json("src/main/resources/<filename>")
+  multilineJsonDf.printSchema()
+  multilineJsonDf.show(false)
  
   // To do
   
