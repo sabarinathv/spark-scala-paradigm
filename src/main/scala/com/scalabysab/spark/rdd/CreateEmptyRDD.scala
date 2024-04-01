@@ -6,7 +6,7 @@ object CreateEmptyRDD extends App{
 
   // creating spark session
 
-  val spark:SparkSession = SparkSession.builder().master("local[5]").appName("sparkscalabysab").getOrCreate()
+  val spark:SparkSession = SparkSession.builder().master("local[3]").appName("sparkscalabysab").getOrCreate()
 
   // creating rdd's
 
